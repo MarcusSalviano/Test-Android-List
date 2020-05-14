@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 Search search = new Search();
 
                 for (String arrayValue : arrayList) {
-                    if(arrayValue.contains(edit_value)) {
+                    if(arrayValue.toLowerCase().contains(edit_value.toLowerCase())) {
                         arrayListSearch.add(arrayValue);
                     } else if (search.hasTypo(arrayValue, edit_value)) {
                         arrayListSearch.add(arrayValue);

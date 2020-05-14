@@ -5,7 +5,7 @@ public class Search {
         if (param1.length() == param2.length()) {
             int changedCount = 0;
             for (int x = 0; x < param1.length(); x++) {
-                if (param1.charAt(x) != param2.charAt(x)) {
+                if (Character.toLowerCase(param1.charAt(x)) != Character.toLowerCase(param2.charAt(x))) {
                     changedCount++;
                 }
             }
@@ -31,7 +31,7 @@ public class Search {
                 if(changedCount == 0 && x == paramB.length()-1)
                     break;
 
-                if(paramB.charAt(x) != paramS.charAt(indexpParamS)) {
+                if(Character.toLowerCase(paramB.charAt(x)) != Character.toLowerCase(paramS.charAt(indexpParamS))) {
                     changedCount++;
                 } else {
                     indexpParamS++;
